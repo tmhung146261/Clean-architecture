@@ -6,7 +6,7 @@ import com.example.todo_clean.domain.repository.Repository
 class GetAllToDo constructor(
     private val repository: Repository
 ) {
-    fun execute(): List<ToDo> {
+    operator fun invoke(): List<ToDo> {
         return repository.getAllToDo()
     }
 }

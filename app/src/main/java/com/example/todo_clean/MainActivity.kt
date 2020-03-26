@@ -21,13 +21,13 @@ class MainActivity : AppCompatActivity() {
         refreshData()
         findViewById<Button>(R.id.btnAdd).setOnClickListener {
             val content = findViewById<EditText>(R.id.edtContent).text.toString()
-            createToDo.excute(content)
+            createToDo(content)
             refreshData()
         }
     }
 
     fun refreshData() {
-        val todos = getAllToDo.execute()
+        val todos = getAllToDo()
         findViewById<TextView>(R.id.txtContent).text = todos.toString()
     }
 }

@@ -7,7 +7,7 @@ import java.lang.IllegalArgumentException
 class CreateToDo(
     val repository: Repository
 ) {
-    fun excute(title: String) {
+    operator fun invoke(title: String) {
         if(title.isBlank()) {
             throw IllegalArgumentException("title is not empty")
         }
